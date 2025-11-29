@@ -1,0 +1,186 @@
+@import "../../data/styles.css";
+
+.homepage-logo-container {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-top: 0px;
+}
+
+.homepage-container {
+	padding-top: 130px;
+
+}
+
+.homepage-first-area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.homepage-first-area-left-side {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.homepage-title {
+	width: 130% !important;
+}
+
+.homepage-subtitle {
+	width: 85% !important;
+}
+
+.homepage-first-area-right-side {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.homepage-image-container {
+	width: 370px;
+	height: 370px;
+	flex-shrink: 0;
+}
+
+.homepage-image-wrapper {
+	overflow: hidden;
+	border-radius: 10%;
+	transform: rotate(3deg);
+	width: 100%;
+	height: 100%;
+}
+
+.homepage-image-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.homepage-socials {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-top: 30px;
+}
+
+.homepage-social-icon {
+	padding-right: 20px;
+	font-size: 25px;
+	transition: color 0.2s ease-in-out;
+	color: var(--secondary-color);
+}
+
+.homepage-social-icon:hover {
+	color: var(--primary-color);
+}
+
+.homepage-after-title {
+	display: flex;
+	gap: 20px;
+}
+
+.homepage-projects {
+	flex-basis: 300px;
+	padding-top: 40px;
+}
+
+.homepage-skills {
+	flex: 1;
+	padding-top: 17px;
+	margin-left: -30px;
+}
+
+.homepage-works {
+	flex: 1;
+	padding-top: 30px;
+	background-color: transparent;
+	border-radius: 0;
+}
+
+@media (max-width: 1024px) {
+	.homepage-first-area {
+		flex-direction: column;
+	}
+
+	.homepage-first-area-left-side {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		order: 2;
+	}
+
+	.homepage-title {
+		width: 100%;
+		margin-top: 20px;
+		order: 2;
+	}
+
+	.homepage-subtitle {
+		width: 100%;
+		margin-top: 10px;
+		order: 3;
+	}
+
+	.homepage-first-area-right-side {
+		width: 100%;
+		order: 3;
+	}
+
+	.homepage-image-container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		margin-left: 10px;
+		order: 1;
+	}
+
+	.homepage-after-title {
+		flex-direction: column;
+	}
+
+	.homepage-projects {
+		flex-basis: auto;
+	}
+
+	.homepage-skills {
+		flex-basis: auto;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+
+	.homepage-works {
+		flex-basis: auto;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+}
+
+.wrapper {
+	border: 0px solid blue;
+	border-radius: 50%;
+
+}
+
+.container {
+	background-color: rgba(255, 192, 203, 0.292);
+
+	border-radius: 40px;
+
+}
+
+.barCompleted {
+	background-color: var(--link-color);
+	width: 80%;
+	border-radius: 40px;
+
+
+}
+
+.label {
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0);
+	padding-left: 80%;
+}

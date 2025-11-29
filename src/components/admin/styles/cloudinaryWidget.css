@@ -1,0 +1,226 @@
+.cloudinary-widget-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.cloudinary-widget-container *,
+.cloudinary-widget-container *::before,
+.cloudinary-widget-container *::after {
+    box-sizing: border-box;
+}
+
+.cloudinary-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Preview Wrapper */
+.cloudinary-preview-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    background: var(--quad-color);
+}
+
+.cloudinary-preview-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.cloudinary-remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cloudinary-remove-btn:hover {
+    background: var(--error-color);
+    transform: scale(1.1);
+}
+
+.cloudinary-success-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--success-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Upload Zone */
+.cloudinary-upload-zone {
+    border: 2px dashed var(--card-border);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--quad-color);
+    transition: all 0.2s ease;
+}
+
+.cloudinary-upload-zone:hover {
+    border-color: var(--link-color);
+    background: rgba(56, 189, 248, 0.05);
+}
+
+.cloudinary-button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--quad-color) 100%);
+    color: var(--primary-color);
+    padding: 14px 20px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: var(--secondary-font);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cloudinary-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--link-color) 0%, #0284c7 100%);
+    border-color: var(--link-color);
+    transform: translateY(-1px);
+}
+
+.cloudinary-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cloudinary-button svg {
+    font-size: 1.2rem;
+}
+
+/* URL Divider */
+.cloudinary-url-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.cloudinary-url-divider::before,
+.cloudinary-url-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--card-border);
+}
+
+.cloudinary-url-divider span {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* URL Input */
+.cloudinary-url-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 4px 4px 4px 12px;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 100%;
+}
+
+.cloudinary-url-input-wrapper:focus-within {
+    border-color: var(--link-color);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+.cloudinary-url-icon {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.cloudinary-url-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    padding: 8px 0;
+    outline: none;
+    font-family: var(--secondary-font);
+    width: 100%;
+}
+
+.cloudinary-url-input::placeholder {
+    color: var(--tertiary-color);
+}
+
+.cloudinary-url-submit {
+    background: var(--link-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--secondary-font);
+}
+
+.cloudinary-url-submit:hover:not(:disabled) {
+    background: #0284c7;
+}
+
+.cloudinary-url-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Error State */
+.cloudinary-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(248, 113, 113, 0.1);
+    border: 1px solid var(--error-color);
+    border-radius: 8px;
+    color: var(--error-color);
+    font-size: 0.85rem;
+}
+
+.cloudinary-error svg {
+    flex-shrink: 0;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "pholio-functions",
+  "version": "1.0.0",
+  "description": "Firebase Cloud Functions for Pholio",
+  "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.11.0",
+    "firebase-functions": "^4.5.0",
+    "groq-sdk": "^0.3.3",
+    "@google/generative-ai": "^0.11.1",
+    "cors": "^2.8.5"
+  }
+}

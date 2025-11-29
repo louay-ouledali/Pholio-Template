@@ -1,0 +1,168 @@
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.image-upload-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.upload-dropzone {
+    border: 2px dashed var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s;
+    background: var(--quad-color);
+    position: relative;
+}
+
+.upload-dropzone:hover {
+    border-color: var(--link-color);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.upload-icon {
+    font-size: 1.5rem;
+    color: var(--link-color);
+}
+
+.image-preview-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+}
+
+.image-preview {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.remove-image-btn:hover {
+    background: var(--error-color);
+}
+
+.upload-success-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--success-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--success-color);
+    transition: width 0.3s ease;
+}
+
+.upload-error {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Manual URL Input Styles */
+.manual-url-input-wrapper {
+    margin-top: 15px;
+    border-top: 1px solid var(--card-border);
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.manual-url-divider {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.manual-url-divider::before,
+.manual-url-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--card-border);
+}
+
+.manual-url-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.2s;
+    box-sizing: border-box;
+    /* Critical for preventing overflow */
+}
+
+.manual-url-input:focus {
+    border-color: var(--link-color);
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 2px rgba(var(--link-color-rgb), 0.1);
+}
+
+.manual-url-input::placeholder {
+    color: var(--tertiary-color);
+    opacity: 0.7;
+}

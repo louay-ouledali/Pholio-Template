@@ -1,0 +1,63 @@
+@import "../../../data/styles.css";
+
+.homepage-article {
+	width: 90%;
+	background: var(--card-bg);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.homepage-article:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.homepage-article-content {
+	padding: 0px;
+}
+
+.homepage-article-date {
+	opacity: 1;
+	color: var(--tertiary-color);
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+.homepage-article-title {
+	opacity: 1;
+	color: var(--primary-color);
+	font-size: 16px;
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+.homepage-article-description {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.homepage-article-link {
+	opacity: 1;
+	padding-top: 20px;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.homepage-article-link a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.homepage-article {
+		width: 100%;
+	}
+}

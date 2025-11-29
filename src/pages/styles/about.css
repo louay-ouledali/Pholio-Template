@@ -1,0 +1,237 @@
+.about-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.about-logo {
+	display: flex;
+	position: fixed;
+	
+	border: 1px solid white;
+	border-radius: 50%;
+	box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.25);
+	top: 1.5vh;
+	z-index: 1000;
+	
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	
+	margin: 0;
+	padding-top: 120px;
+}
+
+.about-main {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.about-right-side {
+	flex: 1;
+}
+.about-right2-side {
+	flex: 1;
+}
+.about-title {
+	width: 100% !important;
+}
+
+.about-subtitle {
+	width: 100% !important;
+}
+
+.about-left-side {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-image-container {
+   width: 450px;
+   max-width: 90vw;
+   z-index: 1;
+}
+
+.about-image-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 10%;
+	transform: rotate(3deg);
+}
+
+.about-image-wrapper img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   z-index: 1;
+}
+
+.about-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: #ffcc00;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.about-arrow.left { left: 0; }
+.about-arrow.right { right: 0; }
+.about-arrow:hover { background: rgba(255,255,255,0.2); }
+
+.about-socials {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.about-socials-mobile {
+	display: none;
+}
+
+.about-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  animation: modalFadeIn 0.5s cubic-bezier(.77,0,.18,1);
+}
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.about-modal-content {
+  background: #222e;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #000a;
+
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: modalPopIn 0.5s cubic-bezier(.77,0,.18,1);
+}
+@keyframes modalPopIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+.about-modal-img {
+  max-width: 80vw;
+  max-height: 70vh;
+  border-radius: 12px;
+  box-shadow: 0 0 0px #3cf8;
+}
+.about-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: #222c;
+  color: #fff;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.about-modal-close:hover {
+  background: #3cf8;
+  color: #222;
+}
+
+@media (max-width: 1024px) {
+	.about-logo {
+		z-index: 100;
+	}
+
+	.about-main {
+		flex-direction: column;
+	}
+
+	.about-subtitle {
+		padding-top: 20px !important;
+	}
+
+	.about-left-side {
+		flex-basis: 100%;
+		order: 1;
+	}
+
+	.about-right-side {
+		flex-basis: 100%;
+		order: 2;
+	}
+
+	.about-image-container {
+		padding-bottom: 40px;
+	}
+
+	.about-socials {
+		display: none;
+	}
+
+	.about-socials-mobile {
+		padding-top: 30px;
+		display: flex;
+	}
+}
+
+@media (max-width: 600px) {
+   .about-container {
+	   padding-top: 60px;
+   }
+
+   .about-main {
+	   flex-direction: column;
+	   align-items: center;
+   }
+   .about-left-side {
+	   flex-basis: 100%;
+	   width: 100%;
+	   align-items: center;
+	   margin: 0;
+	   padding: 0;
+   }
+   .about-image-container {
+	   width: 100%;
+	   max-width: 100vw;
+	   padding-bottom: 20px;
+   }
+   .about-image-wrapper {
+	   width: 100%;
+	   max-width: 100vw;
+   }
+   .about-image-wrapper img {
+	   width: 100%;
+	   max-width: 100vw;
+   }
+}

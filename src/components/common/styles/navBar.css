@@ -1,0 +1,76 @@
+@import "../../../data/styles.css";
+
+.nav-container {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 20px;
+	z-index: 999;
+	width: 100%;
+}
+
+.nav-background {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 30px;
+	background: var(--card-bg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--card-border);
+	border-radius: 50px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+	display: flex;
+	gap: 30px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-item {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.nav-item.active a {
+	color: var(--link-color) !important;
+}
+
+.nav-item a {
+	text-decoration: none;
+	color: var(--primary-color);
+	transition: color 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+	color: var(--link-color);
+}
+
+@media (max-width: 600px) {
+	.navbar {
+		top: 10px;
+	}
+
+	.nav-background {
+		padding: 10px 20px;
+	}
+
+	.nav-list {
+		gap: 15px;
+	}
+
+	.nav-item {
+		font-size: 12px;
+	}
+}

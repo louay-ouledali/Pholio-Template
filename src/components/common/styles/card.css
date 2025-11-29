@@ -1,0 +1,42 @@
+@import "../../../data/styles.css";
+
+.card {
+	background: var(--card-bg);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+	padding: 30px;
+	padding-bottom: 5px;
+}
+
+.card-header {
+	display: flex;
+	align-items: center;
+}
+
+.card-icon {
+	font-size: 15px;
+	color: var(--tertiary-color);
+}
+
+.card-title {
+	color: black;
+	font-size: 18px;
+	font-weight: 650;
+	font-family: var(--secondary-font);
+	text-align: center;
+	width: 100%;
+	padding-left: 0;
+	font-size: 28px;
+}

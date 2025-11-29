@@ -1,0 +1,185 @@
+@import "/src/data/styles.css";
+
+.App {
+	position: relative;
+	min-height: 100vh;
+	z-index: 1;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--quaternary-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--tertiary-color);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--secondary-color);
+}
+
+.glass-card {
+	background: var(--card-bg);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.page-content {
+
+	position: relative;
+}
+
+.page-content:before,
+.page-content:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: calc((100% - 1200px) / 2);
+
+
+}
+
+.page-content:before {
+	left: 0;
+	z-index: 1;
+
+}
+
+.page-content:after {
+	right: 0;
+	z-index: 1;
+
+}
+
+.content-wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+.title {
+	color: var(--primary-color);
+	font-family: var(--primary-font);
+	font-size: 45px;
+	font-weight: 800;
+	width: 70%;
+	letter-spacing: -1px;
+}
+
+.subtitle {
+	padding-top: 10px;
+	color: var(--secondary-color);
+	font-size: 18px;
+	line-height: 1.6;
+	width: 70%;
+	margin-top: 25px;
+}
+
+.page-footer {
+	position: block;
+}
+
+.page-footer::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	border-top: 2px solid var(--tertiary-color);
+}
+
+@media (max-width: 1270px) {
+
+	.page-content:before,
+	.page-content:after {
+		width: calc((100% - 90%) / 2);
+	}
+
+	.content-wrapper {
+		max-width: 90%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.page-content:before,
+	.page-content:after {
+		width: calc((100% - 950px) / 2);
+	}
+
+	.content-wrapper {
+		max-width: 980px;
+	}
+}
+
+@media (max-width: 800px) {
+	.content-wrapper {
+		max-width: 90%;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+
+	.page-content:before,
+	.page-content:after {
+		display: none;
+	}
+
+	.title {
+		width: 100%;
+	}
+
+	.subtitle {
+		width: 100%;
+	}
+}
+
+.particles-background {
+	position: fixed;
+	inset: 0;
+	/* covers viewport without risking overflow */
+	z-index: 0;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: var(--primary-color);
+	font-size: 24px;
+	font-family: var(--primary-font);
+}
+
+.loading::after {
+	content: "Loading...";
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.2;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
+}
+
+#ProgressBar {
+	z-index: 111111;
+	background-color: black;
+}
